@@ -131,18 +131,25 @@ class RegistrationController extends Controller {
         return redirect('/forgot-password')->with('success', 'Please check your email for a link to reset your password.');
     }
 
-    public function changePasswordGet() {
+    public function changePassword(Request $request) {
         $code = request()->query('code');
-        $token = EmailToken::where([
-            'token' => $code
-        ])->first();
+        if(request()->isMethod('get')) {
+            $token = EmailToken::where([
+                'token' => $code
+            ])->first();
 
-        if(!$token) {
-            return redirect('/forgot-password')->withErrors('Error: Token expired, or invalid email');
+            if(!$token) {
+                return redirect('/forgot-password')->withErrors('Error: Token expired, or invalid email');
+            }
+            return view('visitor.changepassword', ['page_title' => 'Change Password With A Strong One']);
         }
 
-        return view('visitor.changepassword', ['page_title' => 'Change Password With A Strong One']);
-    }
+        $password = $request->password;
+        $repassword = $request->repassword;
+        if($password !== $repassword) {
+            return redirect("/changepassword?code=" . $code)->withErrors('Error: Password does not match');
+        }
+    } 
 
     public function resendVerificationEmail(ResendVerificationToken $request) {
         $token =  rand(100000, 999999);

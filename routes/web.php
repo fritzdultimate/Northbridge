@@ -124,8 +124,8 @@ Route::post('/register', [App\Http\Controllers\RegistrationController::class, 'i
 
 Route::post('/recover', [App\Http\Controllers\RegistrationController::class, 'recoverAccount']);
 
-Route::get('/changepassword', [App\Http\Controllers\RegistrationController::class, 'changePasswordGet']);
-Route::post('/changepassword', [App\Http\Controllers\RegistrationController::class, 'changePasswordPost']);
+Route::get('/changepassword', [App\Http\Controllers\RegistrationController::class, 'changePassword']);
+Route::post('/changepassword', [App\Http\Controllers\RegistrationController::class, 'changePassword']);
 
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'dashboard']);
 Route::get('/user/profile', [App\Http\Controllers\HomeController::class, 'profile']);
