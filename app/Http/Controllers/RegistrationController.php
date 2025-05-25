@@ -105,7 +105,7 @@ class RegistrationController extends Controller {
         $account = UserAccountData::where('account_number', $email)->first();
         
         if(!$user && !$account) {
-            return redirect('/register')->withErrors('Error: Unknown account.');
+            return redirect('/forgot-password')->withErrors('Error: Unknown account.');
         }
         $user = !empty($user) ? $user : $account->user;
         $token =  rand(100000, 999999);
