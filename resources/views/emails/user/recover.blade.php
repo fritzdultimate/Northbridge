@@ -87,7 +87,7 @@
                   <!--[if mso]><table width="584" cellspacing="0" cellpadding="0" border="0" role="presentation"><tbody><tr><td align="center"><![endif]-->
                   <div class="o_col-6s o_center o_sans o_text-md o_text-white" data-color="White" data-size="Text MD" data-min="15" data-max="23" style="font-family: Helvetica, Arial, sans-serif;margin-top: 0px;margin-bottom: 0px;font-size: 19px;line-height: 28px;max-width: 584px;color: #ffffff;text-align: center;">
                     <h3 class="o_heading o_mb-xxs" data-size="Heading 2" data-min="20" data-max="40" style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;margin-top: 0px;margin-bottom: 4px;font-size: 20px;line-height: 39px;">
-                        Dear {{ $details['username'] }},  {{ $details['subject'] }}.,
+                        {{ $details['subject'] }}.
                     </h3>
                     <p class="o_mb-md" style="margin-top: 0px;margin-bottom: 14px;">
                         Someone requested a password reset on your account, use the link below to verify your account if you initiated the action.
