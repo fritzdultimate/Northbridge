@@ -104,17 +104,23 @@
 							</li>
 
 							<li class="nav-item xl-none">
+								<a href="/login" class="btn style2">
+									Login
+								</a>
+							</li>
+
+							<li class="nav-item xl-none">
 								<a href="/register" class="btn style1">
-									Register Nowk
+									Register Now
 								</a>
 							</li>
 
 						</ul>
 
-						<div class="others-options  xl-none">
-							<div class="header-btn xl-none">
+						<div class="others-options  lg-none">
+							<div class="header-btn lg-none">
 								<a href="/register" class="btn style1">
-									Register Noww
+									Register Now
 								</a>
 							</div>
 						</div>
