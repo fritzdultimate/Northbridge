@@ -147,7 +147,7 @@ class RegistrationController extends Controller {
         $password = $request->password;
         $repassword = $request->repassword;
         if($password !== $repassword) {
-            return redirect("/changepassword?code=" . $code);
+            return redirect()->to('/changepassword?' . http_build_query(['code' => $code]));
         }
     } 
 
