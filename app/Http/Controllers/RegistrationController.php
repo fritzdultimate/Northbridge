@@ -108,6 +108,25 @@ class RegistrationController extends Controller {
             return redirect('/register')->withErrors('Error: Unknown account.');
         }
         $user = !empty($user) ? $user : $account->user;
+        $token =  rand(100000, 999999);
+        EmailToken::insert([
+            'token' => $token,
+            'email' => $user->email,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+        $frontendUrl = env("FRONTEND_URL");
+
+        $details = [
+            'username' => $user->name,
+            'resetLink' => "$frontendUrl/changepassword?code=$token",
+            'subject' => 'Account Recovery In Process',
+            'date' => date("Y-m-d H:i:s"),
+            'view' => 'emails.user.recover'
+        ];
+
+        $mailer = new \App\Mail\MailSender($details);
+        Mail::to($user->email)->send($mailer);
     }
 
     public function resendVerificationEmail(ResendVerificationToken $request) {
