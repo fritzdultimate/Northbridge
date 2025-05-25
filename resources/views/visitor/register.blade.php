@@ -14,7 +14,7 @@
                             <h2>Open Account</h2>
                             <ul class="breadcrumb-menu list-style">
                                 <li><a href="/">Home </a></li>
-                                <li>Open Accounti>
+                                <li>Open Account
                             </ul>
                         </div>
                     </div>
