@@ -12,7 +12,7 @@
 							</span>
 						</a>
 						<p class="comp-desc">
-						Welcome to Greenford Credit Union, your trusted online banking partner. We are committed to providing secure and reliable financial services to our members, with a focus on community-driven values.
+						Welcome to {{ env('SITE_NAME') }}, your trusted online banking partner. We are committed to providing secure and reliable financial services to our members, with a focus on community-driven values.
 						</p>
 					</div>
 				</div>
@@ -121,10 +121,7 @@
     <script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper","flag_style":"3d","alt_flags":{"en":"usa","pt":"brazil","es":"colombia","fr":"quebec"}}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
-	
 
-
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
 
 
 

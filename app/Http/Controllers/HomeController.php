@@ -38,7 +38,7 @@ class HomeController extends Controller {
     }
     
     public function index(Request $request){
-        $page_title = env('SITE_NAME') . " - Home";
+        $page_title = env('SITE_NAME') . " - Secured & Easy Online Payment Solution";
         return view('visitor.index', compact('page_title'));
     }
 
@@ -233,7 +233,7 @@ class HomeController extends Controller {
 
     public function login(Request $request){
         
-        $page_title = env('SITE_NAME') . " - Login";
+        $page_title = env('SITE_NAME') . " - Access Account";
         
         return view('visitor.login', compact('page_title'));
     }
@@ -278,7 +278,7 @@ class HomeController extends Controller {
         return view('user.current-invested', compact('page_title', 'mode', 'user', 'users'));
     }
     public function aboutUs(Request $request){
-        $page_title = env('SITE_NAME') . " - About Us";
+        $page_title = env('SITE_NAME') . " - Learn More About Us";
         return view('visitor.about-us', compact('page_title'));
     }
     

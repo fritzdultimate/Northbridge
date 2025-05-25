@@ -34,16 +34,16 @@ Route::get('/admin/ids', [App\Http\Controllers\HomeController::class, 'ids']);
 Route::get('/about-us', [App\Http\Controllers\HomeController::class, 'aboutUs']);
 
 Route::get('/privacy', function () {
-    $page_title = env("SITE_NAME") . " - Privacy & Policy";
+    $page_title = env("SITE_NAME") . " - Our Privacy & Policy";
     return view('visitor.privacy', compact('page_title'));
 });
 Route::get('/privacy-policy', function () {
-    $page_title = env("SITE_NAME") . " - Privacy & Policy";
+    $page_title = env("SITE_NAME") . " - Our Privacy & Policy";
     return view('visitor.privacy', compact('page_title'));
 });
 
 Route::get('/terms', function () {
-    $page_title = env("SITE_NAME") . " - Terms & Conditions";
+    $page_title = env("SITE_NAME") . " - Our Terms & Conditions";
     return view('visitor.terms', compact('page_title'));
 });
 
