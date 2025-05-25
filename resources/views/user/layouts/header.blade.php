@@ -34,7 +34,7 @@
             </a>
         </div>
         <div class="pageTitle">
-            <img src="{{ asset('assets/img/favicon.png') }}" alt="{{ env('SITE_NAME') }}" class="logo"> GFCU
+            <img src="{{ asset('assets/img/favicon.png') }}" alt="{{ env('SITE_NAME') }}" class="logo"> {{ env("SITE_NAME_SHORT") }}
         </div>
         <div class="right">
             <a href="/user/notifications" class="headerButton">
