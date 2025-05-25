@@ -58,9 +58,9 @@
         </div>
         @endif
 
-        @if (session('error'))
+        @if (!empty($error))
         <div class="text-center alert-danger p-3 rounded" style="font-size: 20px">
-            {{ session('error') }}
+            {{ $error }}
             
         </div>
         @endif
