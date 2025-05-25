@@ -107,6 +107,7 @@ class RegistrationController extends Controller {
         if(!$user && !$account) {
             return redirect('/register')->withErrors('Error: Unknown account.');
         }
+        $user = !empty($user) ? $user : $account->user;
     }
 
     public function resendVerificationEmail(ResendVerificationToken $request) {
