@@ -110,7 +110,7 @@
 							</li>
 
 							<li class="nav-item xl-none">
-								<a href="/register" class="btn style1">
+								<a href="/register" class="btn style1" style="background-color: transparent">
 									Register Now
 								</a>
 							</li>
