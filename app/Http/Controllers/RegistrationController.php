@@ -99,6 +99,16 @@ class RegistrationController extends Controller {
         }
     }
 
+    public function recoverAccount(Request $request) {
+        $email = $request->email;
+        $user = User::where('email', $email)->first();
+        $account = UserAccountData::where('account_number', $email)->first();
+        
+        if(!$user && !$account) {
+            return redirect('/register')->withErrors('Error: Unknown account.');
+        }
+    }
+
     public function resendVerificationEmail(ResendVerificationToken $request) {
         $token =  rand(100000, 999999);
 

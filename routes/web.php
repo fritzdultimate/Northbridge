@@ -118,8 +118,11 @@ Route::get('/user/savings/create', function () {
 
 Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
 Route::get('/signup', [App\Http\Controllers\HomeController::class, 'register']);
+
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'register']);
 Route::post('/register', [App\Http\Controllers\RegistrationController::class, 'index']);
+
+Route::post('/recover', [App\Http\Controllers\RegistrationController::class, 'recoverAccount']);
 
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'dashboard']);
 Route::get('/user/profile', [App\Http\Controllers\HomeController::class, 'profile']);

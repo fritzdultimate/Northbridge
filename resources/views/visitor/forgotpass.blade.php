@@ -40,9 +40,26 @@
 <p>We will send a verification code to your mail to reset your password.
 </p>
 </div>
+    @if ($errors->any())
+        <div class="text-center alert-danger p-3 rounded" style="font-size: 20px">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            
+        </div>
+        @endif
+
+        @if (session('success'))
+        <div class="text-center alert-success p-3 rounded" style="font-size: 20px">
+            {{ session('success') }}
+            
+        </div>
+    @endif
 <div class="login-form">
 <div class="login-body">
-    <form class="form-wrap" action="/recover-account">
+    <form class="form-wrap" action="/recover">
         @csrf
         <div class="row">
             <div class="col-lg-12">
