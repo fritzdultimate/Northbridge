@@ -130,7 +130,7 @@ function unlockFunds() {
 
 function currency_conversion($currency, $amount) {
     // Fetching JSON
-    $req_url = 'https://api.exchangerate-api.com/v4/latest/GBP';
+    $req_url = 'https://api.exchangerate-api.com/v4/latest/USD';
     $response_json = file_get_contents($req_url);
 
     // Continuing if we got a result
@@ -163,7 +163,7 @@ function get_currency_symbol($currency) {
 
 function returnCurrencyLocale($currency, $amount) {
     // Fetching JSON
-    $req_url = 'https://api.exchangerate-api.com/v4/latest/GBP';
+    $req_url = 'https://api.exchangerate-api.com/v4/latest/USD';
     $response_json = file_get_contents($req_url);
 
     // Continuing if we got a result
