@@ -114,7 +114,7 @@
 						<div class="others-options  lg-none">
 							<div class="header-btn lg-none">
 								<a href="/register" class="btn style1">
-									Register Now
+									Register Noww
 								</a>
 							</div>
 						</div>
