@@ -149,7 +149,7 @@ class RegistrationController extends Controller {
         if($password !== $repassword) {
             return view('visitor.changepassword', [
                 'page_title' => 'Change Password With A Strong One',
-                'error' => "Error: Password does not match $code"
+                'error' => "Error: Password does not match $code g"
             ])->with(['error' => 'Error: Password does not match']);
         }
     } 
