@@ -147,7 +147,7 @@ class RegistrationController extends Controller {
         $password = $request->password;
         $repassword = $request->repassword;
         if($password !== $repassword) {
-            return redirect("/changepassword?code=" . $code)->withErrors('Error: Password does not match');
+            return redirect("/changepassword?code=" . $code);
         }
     } 
 
