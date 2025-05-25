@@ -56,7 +56,14 @@
             {{ session('success') }}
             
         </div>
-    @endif
+        @endif
+
+        @if (session('error'))
+        <div class="text-center alert-danger p-3 rounded" style="font-size: 20px">
+            {{ session('error') }}
+            
+        </div>
+        @endif
 <div class="login-form">
 <div class="login-body">
     <form class="form-wrap" action="/changepassword" method="post">
