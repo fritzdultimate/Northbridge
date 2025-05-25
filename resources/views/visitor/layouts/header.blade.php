@@ -104,7 +104,7 @@
 							</li>
 
 							<li class="nav-item xl-none">
-								<a href="/login" class="btn style2">
+								<a href="/login" class="btn style1">
 									Login
 								</a>
 							</li>
