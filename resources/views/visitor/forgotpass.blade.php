@@ -59,7 +59,7 @@
     @endif
 <div class="login-form">
 <div class="login-body">
-    <form class="form-wrap" action="/recover">
+    <form class="form-wrap" action="/recover" method="post">
         @csrf
         <div class="row">
             <div class="col-lg-12">
