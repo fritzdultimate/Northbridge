@@ -144,15 +144,25 @@ class RegistrationController extends Controller {
             return view('visitor.changepassword', ['page_title' => 'Change Password With A Strong One']);
         }
 
+    }
+
+    public function changePasswordPost(Request $request) {
         $password = $request->password;
-        $repassword = $request->repassword;
-        if($password !== $repassword) {
-            return view('visitor.changepassword', [
-                'page_title' => 'Change Password With A Strong One',
-                'error' => "Error: Password does not match $code g"
-            ])->with(['error' => 'Error: Password does not match']);
+        $code = $request->code;
+        $token = EmailToken::where([
+            'token' => $code
+        ])->first();
+
+        if(!$token) {
+            return redirect('/forgot-password')->withErrors('Error: Token expired, or invalid email');
         }
-    } 
+
+        User::where(['email', $token->email])->update([
+            'password' => Hash::make($password)
+        ]);
+
+        return redirect('/login')->with('success', 'Password Changed.');
+    }
 
     public function resendVerificationEmail(ResendVerificationToken $request) {
         $token =  rand(100000, 999999);

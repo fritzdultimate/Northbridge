@@ -77,13 +77,7 @@
 
             <div class="col-lg-12">
                 <div class="form-group">
-                    <input id="repassword" name="repassword" type="password" placeholder="Re-enter Password" required>
-                </div>
-            </div>
-
-            <div class="col-lg-12">
-                <div class="form-group">
-                    <input id="repassword" name="code" value="{{ request('code') }}">
+                    <input id="code" name="code" type="hidden" value="{{ request('code') }}">
                 </div>
             </div>
         
