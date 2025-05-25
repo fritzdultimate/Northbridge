@@ -47,7 +47,7 @@
 <i class="ri-arrow-down-s-line plus"></i>
 <i class="ri-arrow-up-s-line minus"></i>
 </span>
-What services does Greenford Credit Union offer?
+What services does {{ env("APP_NAME") }} offer?
 </button>
 </h2>
 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -97,7 +97,7 @@ How do I apply for a loan?
 <i class="ri-arrow-down-s-line plus"></i>
 <i class="ri-arrow-up-s-line minus"></i>
 </span>
-Is my money insured at Greenford Credit Union?
+Is my money insured at {{ env("APP_NAME") }}?
 </button>
 </h2>
 <div id="collapsefour" class="accordion-collapse collapse " aria-labelledby="headingfour" data-bs-parent="#accordionExample">
@@ -115,7 +115,7 @@ Is my money insured at Greenford Credit Union?
 <i class="ri-arrow-down-s-line plus"></i>
 <i class="ri-arrow-up-s-line minus"></i>
 </span>
-What are the fees for using Greenford Credit Union's services?
+What are the fees for using {{ env("APP_NAME") }}'s services?
 </button>
 </h2>
 <div id="collapsefive" class="accordion-collapse collapse " aria-labelledby="headingfive" data-bs-parent="#accordionExample">

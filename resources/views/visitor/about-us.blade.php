@@ -37,13 +37,13 @@
                 <div class="col-xl-10 offset-xl-1">
                     <div class="single-terms">
                         <h3>About us: </h3>
-                        <p>Welcome to Greenford Credit Union, your trusted online banking partner. We are committed to providing secure and reliable financial services to our members, with a focus on community-driven values.</p>
-      <p>At Greenford Credit Union, we believe in the power of people coming together to achieve their financial goals. Our online banking platform is designed to make banking simple, convenient, and accessible to everyone, regardless of their location or background.</p>
+                        <p>Welcome to {{ env('APP_NAME') }}, your trusted online banking partner. We are committed to providing secure and reliable financial services to our members, with a focus on community-driven values.</p>
+      <p>At {{ env('APP_NAME') }}, we believe in the power of people coming together to achieve their financial goals. Our online banking platform is designed to make banking simple, convenient, and accessible to everyone, regardless of their location or background.</p>
       <p>As a member-owned financial cooperative, our mission is to empower our members to take control of their finances and build a stronger financial future. We offer a wide range of products and services, including savings and checking accounts, loans, mortgages, and credit cards, all designed to meet the unique needs of our members.</p>
       <p>Our online banking platform is easy to use and secure, allowing you to manage your finances from anywhere at any time. With our mobile banking app, you can check your account balances, transfer funds, pay bills, and deposit checks right from your smartphone or tablet.</p>
-      <p>At Greenford Credit Union, we are committed to promoting financial literacy and helping our members make informed financial decisions. Our team of experienced financial advisors is always ready to provide personalized guidance and support to help you achieve your financial goals.</p>
+      <p>At {{ env('APP_NAME') }}, we are committed to promoting financial literacy and helping our members make informed financial decisions. Our team of experienced financial advisors is always ready to provide personalized guidance and support to help you achieve your financial goals.</p>
       <p>We are proud to be a part of the Greenford community and strive to give back in meaningful ways. As a member of our credit union, you can be confident that your deposits are reinvested in the local community through loans and financial support to businesses and individuals.</p>
-      <p>Join Greenford Credit Union today and experience the benefits of community-driven banking. We look forward to serving you!</p>
+      <p>Join {{ env('APP_NAME') }} today and experience the benefits of community-driven banking. We look forward to serving you!</p>
     
                     </div>
                 </div>

@@ -12,10 +12,10 @@
 <div class="row align-items-center">
 <div class="col-lg-7 col-md-8 col-sm-8">
 <div class="breadcrumb-title">
-<h2>About Us</h2>
+<h2>Privacy Policy</h2>
 <ul class="breadcrumb-menu list-style">
 <li><a href="/">Home </a></li>
-<li>About Us</li>
+<li>Privacy Policy</li>
 </ul>
 </div>
 </div>
@@ -39,7 +39,7 @@
 
 <div class="single-terms">
 
-<p>At Greenford Credit Union, we understand the importance of protecting your personal and financial information. We are committed to maintaining the privacy and confidentiality of the information you provide to us when you use our website and services.</p>
+<p>At {{ env("APP_NAME") }}, we understand the importance of protecting your personal and financial information. We are committed to maintaining the privacy and confidentiality of the information you provide to us when you use our website and services.</p>
 <h3>Information We Collect:</h3>
 <ul>
   <li>We may collect personal information from you when you register for an account, apply for a loan or credit card, or use our online banking services. This information may include your name, address, phone number, email address, social security number, date of birth, and financial information such as your income, assets, and debts.</li>
