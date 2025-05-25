@@ -110,7 +110,7 @@
 							</li>
 
 							<li class="nav-item xl-none">
-								<a href="/register" class="btn style1" style="background-color: transparent; color: rgb(16, 172, 16)">
+								<a href="/register" class="btn style1" style="background-color: transparent; color: #00a9a4;">
 									Register Now
 								</a>
 							</li>
