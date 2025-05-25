@@ -131,6 +131,19 @@ class RegistrationController extends Controller {
         return redirect('/forgot-password')->with('success', 'Please check your email for a link to reset your password.');
     }
 
+    public function changePasswordGet() {
+        $code = request()->query('code');
+        $token = EmailToken::where([
+            'token' => $code
+        ])->first();
+
+        if(!$token) {
+            return redirect('/forgot-password')->withErrors('Error: Token expired, or invalid email');
+        }
+
+        return redirect('/forgot-password')->with('success', 'Working for now.');
+    }
+
     public function resendVerificationEmail(ResendVerificationToken $request) {
         $token =  rand(100000, 999999);
 
