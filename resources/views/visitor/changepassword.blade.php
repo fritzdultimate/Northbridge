@@ -64,7 +64,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <input id="email" name="email" type="email" placeholder="Email/Account Number" required>
+                    <input id="paasword" name="password" type="password" placeholder="Enter Password" required>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <input id="repassword" name="repassword" type="password" placeholder="Re-enter Password" required>
                 </div>
             </div>
         
