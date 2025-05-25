@@ -42,27 +42,24 @@
 </div>
 <div class="login-form">
 <div class="login-body">
-<form class="form-wrap" action="#">
-<div class="row">
-<div class="col-lg-12">
-<div class="form-group">
-<input id="email" name="email" type="email" placeholder="Username/Email/Phone" required>
-</div>
-</div>
-<div class="col-lg-12">
-<div class="form-group">
-<input id="pwd" name="pwd" type="password" placeholder="Old Password">
-</div>
-</div>
-<div class="col-lg-12">
-<div class="form-group mb-0">
-<button class="btn style1 w-100 d-block">
-Submit
-</button>
-</div>
-</div>
-</div>
-</form>
+    <form class="form-wrap" action="/recover-account">
+        @csrf
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <input id="email" name="email" type="email" placeholder="Email/Account Number" required>
+                </div>
+            </div>
+        
+            <div class="col-lg-12">
+                <div class="form-group mb-0">
+                    <button class="btn style1 w-100 d-block">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </div>
 </div>
