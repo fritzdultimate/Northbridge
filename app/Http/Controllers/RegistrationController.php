@@ -141,7 +141,7 @@ class RegistrationController extends Controller {
             return redirect('/forgot-password')->withErrors('Error: Token expired, or invalid email');
         }
 
-        return view('visitor.changepassword');
+        return view('visitor.changepassword', ['page_title' => 'Change Password With A Strong One']);
     }
 
     public function resendVerificationEmail(ResendVerificationToken $request) {
