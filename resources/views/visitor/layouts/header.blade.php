@@ -111,8 +111,8 @@
 
 						</ul>
 
-						<div class="others-options  lg-none">
-							<div class="header-btn lg-none">
+						<div class="others-options  xl-none">
+							<div class="header-btn xl-none">
 								<a href="/register" class="btn style1">
 									Register Noww
 								</a>
