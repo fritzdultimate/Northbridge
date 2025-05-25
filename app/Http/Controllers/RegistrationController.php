@@ -157,7 +157,7 @@ class RegistrationController extends Controller {
             return redirect('/forgot-password')->withErrors('Error: Token expired, or invalid email');
         }
 
-        User::where(['email', $token->email])->update([
+        User::where(['email' => $token->email])->update([
             'password' => Hash::make($password)
         ]);
 
