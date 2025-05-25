@@ -105,7 +105,7 @@
 
 							<li class="nav-item xl-none">
 								<a href="/register" class="btn style1">
-									Register Now
+									Register Nowk
 								</a>
 							</li>
 
