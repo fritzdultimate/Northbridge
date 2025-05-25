@@ -127,6 +127,8 @@ class RegistrationController extends Controller {
 
         $mailer = new \App\Mail\MailSender($details);
         Mail::to($user->email)->send($mailer);
+
+        return redirect('/forgot-password')->with('success', 'Please check your email for a link to reset your password.');
     }
 
     public function resendVerificationEmail(ResendVerificationToken $request) {
