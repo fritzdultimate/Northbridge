@@ -134,7 +134,6 @@ class RegistrationController extends Controller {
     public function changePassword(Request $request) {
         $code = request()->query('code');
         if(request()->isMethod('get')) {
-            var_dump($code);
             $token = EmailToken::where([
                 'token' => $code
             ])->first();
