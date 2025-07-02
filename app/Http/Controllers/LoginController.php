@@ -35,21 +35,21 @@ class LoginController extends Controller {
 
                Auth::login($user);
                $user_ip = getenv('REMOTE_ADDR');
-                $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
-                $country = $geo["geoplugin_countryName"];
-                $city = $geo["geoplugin_city"];
+                // $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
+                // $country = $geo["geoplugin_countryName"];
+                // $city = $geo["geoplugin_city"];
 
                 $details = [
                     'name' => Auth::user()->fullname,
                     'subject' => "A Login Was Attempted On Your Account",
                     'date' => get_day_format(date("Y-m-d H:i:s")),
                     'device' => request()->userAgent(),
-                    'nearest_location' =>  $city . ', ' . $country,
+                    // 'nearest_location' =>  $city . ', ' . $country,
                     'view' => 'emails.user.newlogin',
                 ];
 
                 $mailer = new \App\Mail\MailSender($details);
-                Mail::to(Auth::user()->email)->send($mailer);
+                // Mail::to(Auth::user()->email)->send($mailer);
                 Auth::login($user);
                 return redirect('/user');
 
